@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "./node_modules/.bin/compodoc -p tsconfig.app.json",
+    "compodoc-s": "./node_modules/.bin/compodoc -p tsconfig.app.json -s"
   },
   "private": true,
   "dependencies": {
