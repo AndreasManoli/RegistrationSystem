@@ -1,0 +1,22 @@
+:host {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  padding: 50px;
+  box-sizing: border-box;
+
+  .editor {
+    flex: 1;
+    width: 100%;
+
+    ::ng-deep {
+      > div {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
