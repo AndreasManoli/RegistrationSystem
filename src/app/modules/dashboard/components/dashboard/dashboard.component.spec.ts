@@ -7,6 +7,7 @@ class MockRegisterService {
   IsRegister = true;
 }
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'json-editor',
   template: 'dashboard.component.html'
 })

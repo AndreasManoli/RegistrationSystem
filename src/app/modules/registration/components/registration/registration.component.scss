@@ -1,0 +1,20 @@
+:host {
+  .formWrapper {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .loading {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+  .error-list {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,49 @@
+<form *ngIf="(fields$ | async) as fields; else loadingOrError" novalidate class="formWrapper" [formGroup]="form">
+  <ng-container *ngFor="let item of fields">
+    <ng-container [ngSwitch]="item.type">
+      <mat-form-field *ngSwitchCase="'email'">
+        <mat-label>{{item.label}}</mat-label>
+        <input matInput [formControlName]="item.name" [required]="item.required" />
+        <mat-error *ngIf="form?.controls[item.name]?.invalid">{{getFirstValidationMessage(item.name)}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field *ngSwitchCase="'text'">
+        <mat-label>{{item.label}}</mat-label>
+        <input matInput [formControlName]="item.name" [required]="item.required" />
+        <mat-error *ngIf="form?.controls[item.name]?.invalid">{{getFirstValidationMessage(item.name)}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field *ngSwitchCase="'phone'">
+        <mat-label>{{item.label}}</mat-label>
+        <input matInput [formControlName]="item.name" [required]="item.required" />
+        <mat-error *ngIf="form?.controls[item.name]?.invalid">{{getFirstValidationMessage(item.name)}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field *ngSwitchCase="'password'">
+        <mat-label>{{item.label}}</mat-label>
+        <input matInput [formControlName]="item.name" [type]="hide[item.name] ? 'password' : 'text'" [required]="item.required" />
+        <button mat-icon-button matSuffix (click)="hide[item.name]  = !hide[item.name] ">
+          <mat-icon>{{hide[item.name] ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="form?.controls[item.name]?.invalid">{{getFirstValidationMessage(item.name)}}</mat-error>
+      </mat-form-field>
+    </ng-container>
+  </ng-container>
+  <button *ngIf="!!form?.status" mat-button [disabled]="form.status==='INVALID'" (click)="register()">Register</button>
+</form>
+
+<ng-template #loadingOrError>
+  <div *ngIf="(error$ | async) as errors; else loading" class="error-list">
+    <h1>
+      Error List
+    </h1>
+    <mat-error *ngFor="let item of errors">{{item.message}}</mat-error>
+    <button mat-button routerLink="/">Go Back</button>
+  </div>
+</ng-template>
+
+<ng-template #loading>
+  <div class="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

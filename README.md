@@ -2,21 +2,48 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
 
-## Development server
+# PlaceFinder
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Mode**
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Clone: `git clone https://github.com/AndreasManoli/place-finder.git`
+- Go to folder place-finder: `cd place-finder`
+- Install: `npm install`
+- Serve: `ng serve`
+- Visit: `http://localhost:4200`
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Mode**
+
+- Testing: `ng test`.
+- Testing with Code Coverage: `ng test --code-coverage`.
+
+## Solution Documentation
+
+**Mode**
+
+- Generate once: `npm run compodoc`
+- Generate and serve: `npm run compodoc-s` and visit [docs](http://127.0.0.1:8080)
+
+## Code linting
+
+`npm run lint` or `ng lint`
+
+## Build
+
+**Mode**
+
+- Development: `npm build` or `ng build`.
+- Production: `npm run build-prod` or `ng build --prod`.
+
+## Code scaffolding
+
+Use `ng g -?` to get all available options.
 
 ## Running end-to-end tests
 
