@@ -22,7 +22,7 @@
       <mat-form-field *ngSwitchCase="'password'">
         <mat-label>{{item.label}}</mat-label>
         <input matInput [formControlName]="item.name" [type]="hide[item.name] ? 'password' : 'text'" [required]="item.required" />
-        <button mat-icon-button matSuffix (click)="hide[item.name]  = !hide[item.name] ">
+        <button mat-icon-button matSuffix (click)="hideShow(item.name,$event)">
           <mat-icon>{{hide[item.name] ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
         <mat-error *ngIf="form?.controls[item.name]?.invalid">{{getFirstValidationMessage(item.name)}}</mat-error>

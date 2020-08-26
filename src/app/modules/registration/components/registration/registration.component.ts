@@ -92,4 +92,10 @@ export class RegistrationComponent implements OnInit, OnDestroy {
       }
     });
   }
+  hideShow(name: string, event: Event): void {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    event.preventDefault();
+    this.hide[name] = !this.hide[name];
+  }
 }
