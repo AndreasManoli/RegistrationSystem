@@ -1,0 +1,6 @@
+{
+  "urls": {
+    "registrationField": "http://localhost:4200/registrationFields",
+    "register": "http://localhost:4200/register"
+  }
+}

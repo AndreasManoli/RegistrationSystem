@@ -1,7 +1,7 @@
 import { FieldValidation } from './fieldValidation.interface';
 
-interface RegistrationField {
-  type: 'text' | 'email' | 'phone' | 'password';
+export interface RegistrationField {
+  type: string;
   name: string;
   label: string;
   required: boolean;
