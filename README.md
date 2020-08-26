@@ -10,8 +10,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 **Mode**
 
-- Clone: `git clone https://github.com/AndreasManoli/place-finder.git`
-- Go to folder place-finder: `cd place-finder`
+- Clone: `git clone https://github.com/AndreasManoli/RegistrationSystem.git`
+- Go to folder place-finder: `cd RegistrationSystem`
 - Install: `npm install`
 - Serve: `ng serve`
 - Visit: `http://localhost:4200`
